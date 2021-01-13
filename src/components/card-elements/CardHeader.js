@@ -1,9 +1,9 @@
 import React from "react";
 
-export const CardHeader = () => {
+export const CardHeader = ({ agencyLogoSource, bgColor }) => {
   return (
-    <div>
-      <img src="" alt="" />
+    <div style={{ backgroundColor: bgColor }}>
+      <img src={agencyLogoSource} alt="" />
     </div>
   );
 };

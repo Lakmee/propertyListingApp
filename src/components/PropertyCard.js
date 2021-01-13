@@ -4,13 +4,16 @@ import { CardFooter } from "./card-elements/CardFooter";
 import { CardHeader } from "./card-elements/CardHeader";
 import { CardButton } from "./card-elements/CardButton";
 
-export const PropertyCard = () => {
+export const PropertyCard = ({ type, property }) => {
   return (
     <div>
       <div>
-        <CardHeader />
-        <CardBody />
-        <CardFooter />
+        <CardHeader
+          agencyLogoSource={property.agency.logo}
+          bgColor={property.agency.brandingColors.primary}
+        />
+        <CardBody propertyImageSource={property.mainImage} />
+        <CardFooter propertyPrice={property.price} />
       </div>
       <CardButton />
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-export const CardFooter = () => {
+export const CardFooter = ({ propertyPrice }) => {
   return (
     <div>
-      <p>Property Price</p>
+      <p>{propertyPrice}</p>
     </div>
   );
 };

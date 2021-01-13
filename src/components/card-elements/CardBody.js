@@ -1,9 +1,9 @@
 import React from "react";
 
-export const CardBody = () => {
+export const CardBody = ({ propertyImageSource }) => {
   return (
     <div>
-      <img src="" alt="" />
+      <img src={propertyImageSource} alt="" />
     </div>
   );
 };
