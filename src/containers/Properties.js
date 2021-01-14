@@ -11,17 +11,31 @@ export const Properties = () => {
     setSavedProperties(data.saved);
   }, []);
 
+  const addProperty = (id) => {
+    const newlyAddProperty = results.filter((result) => result.id === id);
+    setSavedProperties([...savedProperties, ...newlyAddProperty]);
+  };
+
+  const removeProperty = (id) => {
+    const remainingSavedProperties = savedProperties.filter(
+      (result) => id !== result.id
+    );
+    setSavedProperties(remainingSavedProperties);
+  };
+
   return (
     <main>
       <PropertySection
         type={"resultsType"}
         properties={results}
         sectionHeading={"Results"}
+        buttonAction={addProperty}
       />
       <PropertySection
         type={"savedPropertiesType"}
         properties={savedProperties}
         sectionHeading={"Saved Properties"}
+        buttonAction={removeProperty}
       />
     </main>
   );

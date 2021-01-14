@@ -4,7 +4,7 @@ import { CardFooter } from "./card-elements/CardFooter";
 import { CardHeader } from "./card-elements/CardHeader";
 import { CardButton } from "./card-elements/CardButton";
 
-export const PropertyCard = ({ type, property }) => {
+export const PropertyCard = ({ type, property, buttonAction }) => {
   return (
     <div>
       <div>
@@ -19,7 +19,7 @@ export const PropertyCard = ({ type, property }) => {
         />
         <CardFooter propertyPrice={property.price} />
       </div>
-      <CardButton />
+      <CardButton buttonAction={buttonAction} propertyId={property.id} />
     </div>
   );
 };
