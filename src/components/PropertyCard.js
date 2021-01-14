@@ -11,8 +11,12 @@ export const PropertyCard = ({ type, property }) => {
         <CardHeader
           agencyLogoSource={property.agency.logo}
           bgColor={property.agency.brandingColors.primary}
+          propertyId={property.id}
         />
-        <CardBody propertyImageSource={property.mainImage} />
+        <CardBody
+          propertyImageSource={property.mainImage}
+          propertyId={property.id}
+        />
         <CardFooter propertyPrice={property.price} />
       </div>
       <CardButton />
