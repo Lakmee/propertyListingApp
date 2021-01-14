@@ -7,6 +7,8 @@ export const PropertySection = ({
   sectionHeading,
   buttonAction,
 }) => {
+  const noListingMessage = "No " + sectionHeading + " Found";
+
   const propertiesMap = properties.map((property) => (
     <PropertyCard
       type={type}
@@ -20,7 +22,7 @@ export const PropertySection = ({
     <section>
       <h2>{sectionHeading}</h2>
       <div>
-        <div>{propertiesMap}</div>
+        <div>{properties.length === 0 ? noListingMessage : propertiesMap}</div>
       </div>
     </section>
   );
