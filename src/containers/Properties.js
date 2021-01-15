@@ -12,8 +12,14 @@ export const Properties = () => {
   }, []);
 
   const addProperty = (id) => {
-    const newlyAddProperty = results.filter((result) => result.id === id);
-    setSavedProperties([...savedProperties, ...newlyAddProperty]);
+    const isAlreadySavedProperty =
+      savedProperties.filter((result) => result.id === id).length > 0;
+    if (isAlreadySavedProperty) {
+      return;
+    } else {
+      const newlyAddProperty = results.filter((result) => result.id === id);
+      setSavedProperties([...savedProperties, ...newlyAddProperty]);
+    }
   };
 
   const removeProperty = (id) => {
