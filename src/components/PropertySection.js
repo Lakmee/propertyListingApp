@@ -21,8 +21,8 @@ export const PropertySection = ({
   return (
     <section>
       <h2>{sectionHeading}</h2>
-      <div>
-        <div>{properties.length === 0 ? noListingMessage : propertiesMap}</div>
+      <div data-testid="propterty-section">
+        {properties.length === 0 ? noListingMessage : propertiesMap}
       </div>
     </section>
   );
