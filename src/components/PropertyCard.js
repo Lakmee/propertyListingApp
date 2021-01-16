@@ -19,7 +19,11 @@ export const PropertyCard = ({ type, property, buttonAction }) => {
         />
         <CardFooter propertyPrice={property.price} />
       </div>
-      <CardButton buttonAction={buttonAction} propertyId={property.id} />
+      <CardButton
+        type={type}
+        buttonAction={buttonAction}
+        propertyId={property.id}
+      />
     </div>
   );
 };

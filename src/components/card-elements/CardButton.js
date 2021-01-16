@@ -1,14 +1,11 @@
 import React from "react";
 
-export const CardButton = ({ buttonAction, propertyId }) => {
-  const buttonText = () => {
-    if (buttonAction.name === "addProperty") return "Add Property";
-    if (buttonAction.name === "removeProperty") return "Remove Property";
-  };
-
+export const CardButton = ({ type, buttonAction, propertyId }) => {
   return (
     <div>
-      <button onClick={() => buttonAction(propertyId)}>{buttonText()}</button>
+      <button onClick={() => buttonAction(propertyId)}>
+        {type === "savedPropertiesType" ? "Remove Property" : "Add Property"}
+      </button>
     </div>
   );
 };
