@@ -3,10 +3,11 @@ import { CardBody } from "./card-elements/CardBody";
 import { CardFooter } from "./card-elements/CardFooter";
 import { CardHeader } from "./card-elements/CardHeader";
 import { CardButton } from "./card-elements/CardButton";
+import "./PropertyCard.scss";
 
 export const PropertyCard = ({ type, property, buttonAction }) => {
   return (
-    <div>
+    <div className="property-card">
       <div>
         <CardHeader
           agencyLogoSource={property.agency.logo}

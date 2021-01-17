@@ -1,8 +1,9 @@
 import React from "react";
+import "./CardButton.scss";
 
 export const CardButton = ({ type, buttonAction, propertyId }) => {
   return (
-    <div>
+    <div className="card-overlay">
       <button onClick={() => buttonAction(propertyId)}>
         {type === "savedPropertiesType" ? "Remove Property" : "Add Property"}
       </button>

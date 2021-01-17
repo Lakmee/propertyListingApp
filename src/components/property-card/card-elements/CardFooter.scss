@@ -1,0 +1,10 @@
+@import "../../../assets/styles/variables";
+
+.card-footer {
+  padding: $small-space;
+  text-align: left;
+  p {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+}

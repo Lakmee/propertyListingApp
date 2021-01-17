@@ -1,0 +1,10 @@
+@import "../../assets/styles/variables";
+
+.property-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  margin: $extra-large-space auto;
+  border-radius: $border-radius-normal;
+  box-shadow: $box-shadow-normal;
+}
