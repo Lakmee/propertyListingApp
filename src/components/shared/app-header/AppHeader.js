@@ -1,4 +1,5 @@
 import React from "react";
+import "./AppHeader.scss";
 
 export const AppHeader = () => {
   return (
