@@ -1,4 +1,3 @@
-import "./App.css";
 import { AppHeader } from "./components/shared/app-header/AppHeader";
 import { AppFooter } from "./components/shared/app-footer/AppFooter";
 import { Properties } from "./containers/Properties";
