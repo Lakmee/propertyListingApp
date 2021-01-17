@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PropertySection } from "../components/PropertySection";
+import { PropertySection } from "../components/property-section/PropertySection";
 import data from "../data/property-data.json";
 
 export const Properties = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { PropertyCard } from "./PropertyCard";
+import { PropertyCard } from "../property-card/PropertyCard";
 
 export const PropertySection = ({
   type,
