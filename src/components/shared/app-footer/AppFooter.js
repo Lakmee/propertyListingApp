@@ -4,7 +4,7 @@ import "./AppFooter.scss";
 export const AppFooter = () => {
   return (
     <footer>
-      <p>Copyright Message</p>
+      <p>Application footer sample text</p>
     </footer>
   );
 };

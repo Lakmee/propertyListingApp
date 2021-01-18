@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./CardHeader.scss";
 
-export const CardHeader = ({ agencyLogoSource, bgColor, propertyId }) => {
+function CardHeader({ agencyLogoSource, bgColor, propertyId }) {
   const logoBgColor = bgColor;
   return (
     <div style={{ backgroundColor: logoBgColor }} className="card-header">
@@ -11,4 +12,12 @@ export const CardHeader = ({ agencyLogoSource, bgColor, propertyId }) => {
       />
     </div>
   );
+}
+
+CardHeader.propTypes = {
+  agencyLogoSource: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
+  propertyId: PropTypes.string.isRequired,
 };
+
+export default CardHeader;

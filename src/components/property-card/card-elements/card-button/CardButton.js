@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./CardButton.scss";
 
-export const CardButton = ({ type, buttonAction, propertyId }) => {
+function CardButton({ type, buttonAction, propertyId }) {
   return (
     <div className="button-wrapper">
       <div tabIndex="0"></div>
@@ -10,4 +11,12 @@ export const CardButton = ({ type, buttonAction, propertyId }) => {
       </button>
     </div>
   );
+}
+
+CardButton.propTypes = {
+  type: PropTypes.string,
+  buttonAction: PropTypes.func.isRequired,
+  propertyId: PropTypes.string.isRequired,
 };
+
+export default CardButton;

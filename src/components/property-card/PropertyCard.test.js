@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { PropertyCard } from "./PropertyCard";
+import PropertyCard from "./PropertyCard";
 
 const testProperty = {
   price: "$726,500",

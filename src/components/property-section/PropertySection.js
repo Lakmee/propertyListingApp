@@ -1,12 +1,8 @@
 import React from "react";
-import { PropertyCard } from "../property-card/PropertyCard";
+import PropTypes from "prop-types";
+import PropertyCard from "../property-card/PropertyCard";
 
-export const PropertySection = ({
-  type,
-  properties,
-  sectionHeading,
-  buttonAction,
-}) => {
+function PropertySection({ type, properties, sectionHeading, buttonAction }) {
   const noListingMessage = "No " + sectionHeading + " Found";
 
   const propertiesMap = properties.map((property) => (
@@ -28,4 +24,13 @@ export const PropertySection = ({
       )}
     </section>
   );
+}
+
+PropertySection.propTypes = {
+  type: PropTypes.string,
+  properties: PropTypes.array.isRequired,
+  sectionHeading: PropTypes.string.isRequired,
+  buttonAction: PropTypes.func.isRequired,
 };
+
+export default PropertySection;

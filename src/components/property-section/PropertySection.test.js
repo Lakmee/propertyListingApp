@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { PropertySection } from "./PropertySection";
+import PropertySection from "./PropertySection";
 
 const testPropertyA = {
   price: "$726,500",
