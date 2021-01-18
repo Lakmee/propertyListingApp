@@ -59,4 +59,18 @@ describe("PropertySection", () => {
     const propertyCardWrapper = screen.getByTestId("propterty-section");
     expect(propertyCardWrapper.children.length).toEqual(2);
   });
+
+  test("Displays a message when there is no properties in the section", () => {
+    render(
+      <PropertySection
+        sectionHeading={props.sectionHeading}
+        properties={[]}
+        buttonAction={props.addProperty}
+      />
+    );
+    const noListingMessage = screen.getByText(
+      "No " + props.sectionHeading + " Found"
+    );
+    expect(noListingMessage).toBeInTheDocument();
+  });
 });
