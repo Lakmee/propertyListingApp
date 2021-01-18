@@ -4,9 +4,9 @@ A React web application that displays a list of properties using a data set.
 
 #### Functionality
 
-This application display a list of properties using the data set in a form of JSON object which is serve as mock backend data. The data set within the "results" array running down the page in a column that has a heading labeled Results. There is a second column with a heading Saved Properties, along side the Results column. It contains the initial property within the "saved" array.
+This application displays a list of properties using the data set in a form of JSON object which has served as mock backend data. The data set within the "results" array running down the page in a column that has a heading labeled Result. There is a second column with a heading Saved Properties, along side the Results column. It contains the initial property within the "saved" array.
 
-Hovering over a property card in the Results column displays an "add" button. When clicking the "add" button creates the property in the "Saved Properties" column. Hovering over a property card in the Saved Properties column displays a "remove" button. Clicking the "remove" button will remove the property from the list of saved properties.
+Hovering over a property card in the Results column displays an "add" button. Clicking the "add" button creates the property in the "Saved Properties" column. Hovering over a property card in the Saved Properties column displays a "remove" button. Clicking the "remove" button removes the property from the list of saved properties.
 
 ## Run Application
 
