@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Property Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React web application that displays a list of properties using a data set.
 
-## Available Scripts
+#### Functionality
 
-In the project directory, you can run:
+This application display a list of properties using the data set in a form of JSON object which is serve as mock backend data. The data set within the "results" array running down the page in a column that has a heading labeled Results. There is a second column with a heading Saved Properties, along side the Results column. It contains the initial property within the "saved" array.
 
-### `npm start`
+Hovering over a property card in the Results column displays an "add" button. When clicking the "add" button creates the property in the "Saved Properties" column. Hovering over a property card in the Saved Properties column displays a "remove" button. Clicking the "remove" button will remove the property from the list of saved properties.
+
+## Run Application
+
+### Install dependencies
+
+Clone the repository. Go to the root folder and execute the following command to install the dependencies.
+
+```bash
+npm install
+```
+
+### Run
+
+This application runs on a CLI. Open a CLI and set the prompt to the root folder. Execute the following command.
+
+```bash
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run Unit Test
 
-### `npm test`
+```bash
+npm test
+```
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Build the application
+
+```bash
+npm run build
+```
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Files Overview
 
-### `npm run eject`
+```
+-- public/
+-- src/
+    -- index.js                     // main entry file
+    -- app.js
+    -- assets
+        -- styles                   // sass variables and mixins
+    -- components                   // presentational components
+        -- shared                   // common components
+            -- app-header
+            -- app-footer
+        -- property-section         // property section componenets
+        -- property-card            // property card components and its elements
+            -- card-elements
+                -- card-header
+                -- card-body
+                -- card-footer
+                -- card-button
+    -- containers                   // container components
+        -- properties               // properties components
+    -- data                         // contains the data set in a form of JSON object
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
